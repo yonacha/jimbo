@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','username',
     ];
 
     /**
@@ -36,4 +36,43 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($user) {
+            $user->userData()->create([
+                'title' => $user->username,
+            ]);
+
+            Mail::to($user->email)->send(new NewUserWelcomeMail());
+        });
+    }
+
+
+
+    public function userData(){
+        return $this->hasOne(UserData::class);
+    }
+
+    public function api(){
+        return $this->hasOne(Api::class);
+    }
+
+    public function blikAliases(){
+        return $this->hasOne(BlikAliases::class);
+    }
+
+    public function cardAliases(){
+        return $this->hasOne(CardAliases::class);
+    }
+
+    public function orders(){
+        return $this->hasMany(Order::class);
+    }
+
+
 }
