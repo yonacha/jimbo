@@ -9,6 +9,8 @@
                         <h1 class="text-white">{{ __('Welcome!') }}</h1>
                         <p class="text-lead text-light">
                             {{ __('Use Black Dashboard theme to create a great project.') }}
+                            <br>
+                            <a href="/product/create">Add New Product</a>
                         </p>
                     </div>
                 </div>

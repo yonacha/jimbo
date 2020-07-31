@@ -16,6 +16,8 @@
             <span class="navbar-toggler-bar navbar-kebab"></span>
         </button>
         <div class="collapse navbar-collapse" id="navigation">
+            <a href="/"> Welcome page</a>
+
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a href="{{ route('home') }}" class="nav-link text-primary">
