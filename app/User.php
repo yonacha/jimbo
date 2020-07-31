@@ -44,11 +44,11 @@ class User extends Authenticatable
         parent::boot();
 
         static::created(function ($user) {
-            $user->userData()->create([
-                'title' => $user->username,
-            ]);
+            $user->userData()->create();
+            $user->api()->create();
+            $user->blikAliases()->create();
+            $user->cardAliases()->create();
 
-            Mail::to($user->email)->send(new NewUserWelcomeMail());
         });
     }
 
