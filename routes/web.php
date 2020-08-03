@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
+Route::post('/product', 'ProductController@store')->name('storeNewProduct');
 Route::get('/product/create', 'ProductController@create');
 Route::get('/product/{product}', 'ProductController@show');
 
