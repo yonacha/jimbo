@@ -82,11 +82,14 @@
     </div>
 
 
-    <script src="{{ asset('black') }}/js/core/jquery.min.js"></script>
+@endsection
+
+@section('scripts')
+
     <script src="{{ asset('black') }}/js/plugins/bootstrap-notify.js"></script>
 
     <script>
-        if( {!! json_encode($flag)!!} === "createdNewProduct"){
+        if( {!! json_encode(($flag ?? ''))!!} === "createdNewProduct"){
             console.log("testtt");
             $.notify({
                 message: 'The product has been created!'
@@ -99,6 +102,5 @@
                 delay: 1500,
             })
         }
-
     </script>
 @endsection

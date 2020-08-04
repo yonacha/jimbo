@@ -17,6 +17,9 @@ Route::get('/', 'Controller@index');
 
 Auth::routes();
 
+Route::get('/test', 'TestController@index');
+Route::get('/test/redis', 'TestController@redis_test');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');

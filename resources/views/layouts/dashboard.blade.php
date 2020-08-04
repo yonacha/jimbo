@@ -22,14 +22,15 @@
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()
-            @include('layouts.navbars.navbar')
-            <div class="wrapper wrapper-full-page">
-                <div class="full-page {{ $contentClass ?? '' }}">
+            <div class="wrapper">
+                    @include('layouts.navbars.sidebar')
+                <div class="main-panel">
+                    @include('layouts.navbars.navs.dashboard')
+
                     <div class="content">
-                        <div class="container">
-                            @yield('content')
-                        </div>
+                        @yield('content')
                     </div>
+
                     @include('layouts.footer')
                 </div>
             </div>
