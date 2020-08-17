@@ -6,12 +6,18 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use App\Product;
+
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+
     public function index(){
-        return view('welcome');
+        $products = Product::orderBy('id','desc')->paginate(6);
+
+
+        return view('welcome',compact('products'));
     }
 }
