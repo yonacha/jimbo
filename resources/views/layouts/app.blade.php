@@ -22,6 +22,7 @@
         @yield('css')
     </head>
     <body class="{{ $class ?? '' }}">
+    <div id="app">
         @auth()
             @include('layouts.navbars.navbar')
             <div class="wrapper wrapper-full-page">
@@ -101,6 +102,7 @@
 
         <script src="{{ asset('black') }}/js/black-dashboard.min.js?v=1.0.0"></script>
         <script src="{{ asset('black') }}/js/theme.js"></script>
+        <script src="{{ asset('/js/app.js')}}"></script>
 
         @stack('js')
 
@@ -203,5 +205,6 @@
         </script>
         @stack('js')
         @yield('scripts')
+    </div>
     </body>
 </html>

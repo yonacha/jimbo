@@ -37,12 +37,11 @@
                                     <p class="my-0">{{$product->name}}</p>
                                 </div>
                                 <div class="price">
-                                    <p class="my-0">{{$product->price}}</p>
+                                    <p class="my-0">{{$product->convertedPrice()}} zł</p>
                                 </div>
                             </div>
                             <div class="pull-right">
-                                <button class="addToCart h-25 btn btn-light"
-                                        style="padding: 8px">{{__('ADD TO CART')}}</button>
+                                <add-to-cart-button></add-to-cart-button>
                             </div>
                         </div>
                     </div>
