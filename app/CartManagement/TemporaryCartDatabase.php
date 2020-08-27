@@ -43,6 +43,7 @@ class TemporaryCartDatabase implements TemporaryCartContract
 
     public function getCartItems()
     {
+        echo ('damn, its the database here');
         // TODO: Implement getCartItems() method.
     }
 }

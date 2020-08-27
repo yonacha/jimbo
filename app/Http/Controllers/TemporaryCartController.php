@@ -32,6 +32,10 @@ class TemporaryCartController extends Controller
         $cartContract->removeFromCart($data);
     }
 
+    public function getCartItems(TemporaryCartContract $cartContract){
+        return $cartContract->getCartItems();
+    }
+
     public function testStore(){
         $client = new Client();
         $client->post('/temporary/cart',['verify'=>false]);

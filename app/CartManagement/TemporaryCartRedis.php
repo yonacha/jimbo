@@ -6,6 +6,7 @@ namespace App\CartManagement;
 
 
 use Predis\Client;
+use Predis\Collection\Iterator;
 
 class TemporaryCartRedis implements TemporaryCartContract
 {
@@ -50,6 +51,11 @@ class TemporaryCartRedis implements TemporaryCartContract
 
     public function getCartItems()
     {
-        // TODO: Implement getCartItems() method.
+        $result = array();
+        foreach(new Iterator\Keyspace($this->redis,$this->preposition . ':product:*[0-9]') as $key) {
+            array_push($result,$key);
+        }
+
+        return $result;
     }
 }

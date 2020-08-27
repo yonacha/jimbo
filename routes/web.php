@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/test', 'TestController@index');
 Route::get('/test/redis', 'TestController@redis_test');
+Route::get('/test/redis/get', 'TemporaryCartController@getCartItems');
 Route::get('/test/cart','TemporaryCartController@testStore');
 
 
