@@ -11,7 +11,23 @@
                             {{ __('Use Black Dashboard theme to create a great project.') }}
                             <br>
                             <a href="/product/create">Add New Product</a>
+
                         </p>
+                        add to cart
+                        <form class="form" method="post" action="{{ route('storeTemporaryCart') }}">
+                        @csrf
+                            <input type="test" name="product_id">
+                            <input type="text" name="quantity">
+                            <input type="submit">
+                        </form>
+                        <br>
+                        remove from cart
+                        <form class="form" method="post" action="{{ route('removeFromCart') }}">
+                        @csrf
+                            <input type="test" name="id">
+                            <input type="text" name="quantity">
+                            <input type="submit">
+                        </form>
                     </div>
                 </div>
             </div>

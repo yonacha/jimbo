@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\CartManagement\TemporaryCartContract;
+use App\CartManagement\TemporaryCartDatabase;
+use App\CartManagement\TemporaryCartRedis;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
@@ -14,7 +17,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(TemporaryCartContract::class,function ($app){
+            if (request()->has('guest')){
+                return new TemporaryCartRedis();
+            }
+            else{
+                return new TemporaryCartDatabase();
+            }
+        });
     }
 
     /**

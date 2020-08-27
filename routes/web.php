@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/test', 'TestController@index');
 Route::get('/test/redis', 'TestController@redis_test');
+Route::get('/test/cart','TemporaryCartController@testStore');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -28,6 +30,8 @@ Route::post('/product', 'ProductController@store')->name('storeNewProduct');
 Route::get('/product/create', 'ProductController@create');
 Route::get('/product/{product}', 'ProductController@show');
 
+Route::post('/temporary/cart/','TemporaryCartController@store')->name('storeTemporaryCart');
+Route::post('/temporary/cart/remove','TemporaryCartController@removeFromCart')->name('removeFromCart');
 
 Route::group(['middleware' => 'auth'], function () {
 		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'PageController@icons']);

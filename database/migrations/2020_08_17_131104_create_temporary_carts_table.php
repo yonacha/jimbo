@@ -16,9 +16,8 @@ class CreateTemporaryCartsTable extends Migration
         Schema::create('temporary_carts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('cart_details_id');
             $table->unsignedBigInteger('sum')->nullable();
-            $table->string('session_key',40)->nullable();
+            $table->unsignedBigInteger('user_id');
         });
     }
 

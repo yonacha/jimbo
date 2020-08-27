@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
@@ -14,5 +14,10 @@ class ExampleTest extends TestCase
     public function testBasicTest()
     {
         $this->assertTrue(true);
+    }
+
+    public function testTemporaryCartControllerStoreMethod(){
+        $response = $this->call('POST','/temporary/cart',[1,1]);
+
     }
 }
