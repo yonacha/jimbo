@@ -10,27 +10,32 @@ use Illuminate\Support\Facades\Auth;
 
 class TemporaryCartDatabase implements TemporaryCartContract
 {
+    private $user;
+
+    public function __construct()
+    {
+        $this->user = Auth::user();
+    }
+
     public function addToCart($data)
     {
-        $user = Auth::user();
-        if ($user->temporaryCarts()->count() == 0) {
-            $cart = $user->temporaryCarts()->create([]);
+        if ($this->user->temporaryCarts()->count() == 0) {
+            $cart = $this->user->temporaryCarts()->create([]);
 
             $cart->createCartDetails($data);
         } else {
-            if ($details = $user->temporaryCarts()->first()->cartDetails()->where('product_id', $data['product_id'])->first()) {
+            if ($details = $this->user->temporaryCarts()->first()->cartDetails()->where('product_id', $data['product_id'])->first()) {
                 $details->quantity += $data['quantity'];
                 $details->save();
             } else {
-                $user->temporaryCarts()->first()->createCartDetails($data);
+                $this->user->temporaryCarts()->first()->createCartDetails($data);
             }
         }
     }
 
     public function removeFromCart($data)
     {
-        $user = Auth::user();
-        $details = $user->temporaryCarts()->first()->cartDetails()->get()->where('product_id', $data['product_id'])->first();
+        $details = $this->user->temporaryCarts()->first()->cartDetails()->get()->where('product_id', $data['product_id'])->first();
 
         if (($details->quantity - $data['quantity']) < 0) {
             $details->delete();
@@ -43,7 +48,6 @@ class TemporaryCartDatabase implements TemporaryCartContract
 
     public function getCartItems()
     {
-        echo ('damn, its the database here');
-        // TODO: Implement getCartItems() method.
+        return $this->user->temporaryCarts()->first()->cartDetails()->getResults();
     }
 }

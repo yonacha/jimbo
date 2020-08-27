@@ -4,9 +4,7 @@
     <list default="true" id="918e5cd3-9078-4d61-855d-fc934f61dc97" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/CartManagement/TemporaryCartDatabase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CartManagement/TemporaryCartDatabase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CartManagement/TemporaryCartRedis.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CartManagement/TemporaryCartRedis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TemporaryCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TemporaryCartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/test/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +201,7 @@
       <workItem from="1596024855135" duration="63000" />
       <workItem from="1596445620742" duration="28900000" />
       <workItem from="1597654112010" duration="55094000" />
-      <workItem from="1598528323287" duration="508000" />
+      <workItem from="1598528323287" duration="1141000" />
     </task>
     <task id="LOCAL-00001" summary="+auth">
       <created>1595928804653</created>
@@ -296,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598525855332</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="+ redis get items in cart">
+      <created>1598529146686</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598529146686</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +322,8 @@
     <MESSAGE value="+ models and migrations for temporary carts" />
     <MESSAGE value="+ contract for cart management&#10;+ authenticated user adding to cart and removing" />
     <MESSAGE value="+ redis cart management for guest users" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ redis cart management for guest users" />
+    <MESSAGE value="+ redis get items in cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ redis get items in cart" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="235" key="#CLI_Interpreters" timestamp="1596022556589">
@@ -344,10 +350,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="707" y="424" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1597753714497" />
-    <state x="563" y="117" key="CommitChangelistDialog2" timestamp="1598525854354">
+    <state x="563" y="117" key="CommitChangelistDialog2" timestamp="1598529145955">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="563" y="117" key="CommitChangelistDialog2/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598525854354" />
+    <state x="563" y="117" key="CommitChangelistDialog2/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598529145955" />
     <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1597995807951">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
