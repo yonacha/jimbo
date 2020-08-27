@@ -13,6 +13,7 @@ class TemporaryCartController extends Controller
         $data = request()->validate([
             'product_id' => ['required', 'numeric', 'max:10000000'],
             'quantity' => ['required', 'numeric', 'max:10000000'],
+            'guest' => ''
         ]);
 
         $cartContract->addToCart([
@@ -24,8 +25,9 @@ class TemporaryCartController extends Controller
 
     public function removeFromCart(TemporaryCartContract $cartContract){
         $data = request()->validate([
-            'id' => ['required', 'numeric', 'max:10000000'],
+            'product_id' => ['required', 'numeric', 'max:10000000'],
             'quantity' => ['required', 'numeric', 'max:10000000'],
+            'guest' => ''
         ]);
         $cartContract->removeFromCart($data);
     }

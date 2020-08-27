@@ -30,7 +30,7 @@ class TemporaryCartDatabase implements TemporaryCartContract
     public function removeFromCart($data)
     {
         $user = Auth::user();
-        $details = $user->temporaryCarts()->first()->cartDetails()->get()->where('product_id', $data['id'])->first();
+        $details = $user->temporaryCarts()->first()->cartDetails()->get()->where('product_id', $data['product_id'])->first();
 
         if (($details->quantity - $data['quantity']) < 0) {
             $details->delete();
@@ -39,5 +39,10 @@ class TemporaryCartDatabase implements TemporaryCartContract
             $details->save();
         }
 
+    }
+
+    public function getCartItems()
+    {
+        // TODO: Implement getCartItems() method.
     }
 }

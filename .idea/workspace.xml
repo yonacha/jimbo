@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="918e5cd3-9078-4d61-855d-fc934f61dc97" name="Default Changelist" comment="+ models and migrations for temporary carts">
-      <change afterPath="$PROJECT_DIR$/app/CartManagement/TemporaryCartContract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/CartManagement/TemporaryCartRedis.php" afterDir="false" />
+    <list default="true" id="918e5cd3-9078-4d61-855d-fc934f61dc97" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CartDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CartDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CartManagement/TemporaryCartContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CartManagement/TemporaryCartContract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CartManagement/TemporaryCartDatabase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CartManagement/TemporaryCartDatabase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CartManagement/TemporaryCartRedis.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CartManagement/TemporaryCartRedis.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TemporaryCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TemporaryCartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TemporaryCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TemporaryCart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_17_131104_create_temporary_carts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_17_131104_create_temporary_carts_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/test/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +203,7 @@
       <workItem from="1596022393605" duration="169000" />
       <workItem from="1596024855135" duration="63000" />
       <workItem from="1596445620742" duration="28900000" />
-      <workItem from="1597654112010" duration="43563000" />
+      <workItem from="1597654112010" duration="52589000" />
     </task>
     <task id="LOCAL-00001" summary="+auth">
       <created>1595928804653</created>
@@ -289,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597671421937</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="+ contract for cart management&#10;+ authenticated user adding to cart and removing">
+      <created>1598513226766</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1598513226766</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,21 +308,26 @@
     <MESSAGE value="configuration of Redis, created new layout for dashboard only (navbar issue)" />
     <MESSAGE value="+ Vue component for &quot;add to cart&quot; button and minor welcome view changes" />
     <MESSAGE value="+ models and migrations for temporary carts" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ models and migrations for temporary carts" />
+    <MESSAGE value="+ contract for cart management&#10;+ authenticated user adding to cart and removing" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ contract for cart management&#10;+ authenticated user adding to cart and removing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="235" key="#CLI_Interpreters" timestamp="1596022556589">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="540" y="235" key="#CLI_Interpreters/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1596022556589" />
+    <state x="765" y="262" key="#com.intellij.ide.util.MemberChooser" timestamp="1598513849919">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="765" y="262" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598513849919" />
     <state x="725" y="355" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597753051704">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="725" y="355" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1597753051704" />
-    <state x="690" y="335" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597752800391">
+    <state x="690" y="335" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598513965790">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="690" y="335" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1597752800391" />
+    <state x="690" y="335" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598513965790" />
     <state x="707" y="374" key="#com.jetbrains.php.refactoring.extract.interface.PhpExtractInterfaceDialog#" timestamp="1597753192637">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -331,10 +336,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="707" y="424" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1597753714497" />
-    <state x="563" y="117" key="CommitChangelistDialog2" timestamp="1598431356260">
+    <state x="563" y="117" key="CommitChangelistDialog2" timestamp="1598513225656">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="563" y="117" key="CommitChangelistDialog2/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598431356260" />
+    <state x="563" y="117" key="CommitChangelistDialog2/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598513225656" />
     <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1597995807951">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -355,10 +360,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="570" y="227" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1596450452897" />
-    <state x="667" y="313" width="790" height="806" key="find.popup" timestamp="1597745893526">
+    <state x="667" y="313" width="790" height="806" key="find.popup" timestamp="1598518029909">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="667" y="313" width="790" height="806" key="find.popup/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1597745893526" />
+    <state x="667" y="313" width="790" height="806" key="find.popup/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598518029909" />
     <state x="623" y="255" key="search.everywhere.popup" timestamp="1596449764684">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
