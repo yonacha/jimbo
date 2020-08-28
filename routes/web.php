@@ -33,6 +33,7 @@ Route::get('/product/{product}', 'ProductController@show');
 
 Route::post('/temporary/cart/','TemporaryCartController@store')->name('storeTemporaryCart');
 Route::post('/temporary/cart/remove','TemporaryCartController@removeFromCart')->name('removeFromCart');
+Route::get('/temporary/cart/items','TemporaryCartController@getCartItems')->name('getCartItems');
 
 Route::group(['middleware' => 'auth'], function () {
 		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'PageController@icons']);

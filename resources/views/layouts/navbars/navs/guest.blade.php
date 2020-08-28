@@ -26,6 +26,12 @@
                     </a>
                 </li>
                 --}}
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <cart></cart>
+                        <i class="tim-icons icon-cart"></i> {{ __('Cart') }}
+                    </a>
+                </li>
                 <li class="nav-item ">
                     <a href="{{ route('register') }}" class="nav-link">
                         <i class="tim-icons icon-laptop"></i> {{ __('Register') }}

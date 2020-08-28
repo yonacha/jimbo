@@ -53,7 +53,11 @@ class TemporaryCartRedis implements TemporaryCartContract
     {
         $result = array();
         foreach(new Iterator\Keyspace($this->redis,$this->preposition . ':product:*[0-9]') as $key) {
-            array_push($result,$key);
+            $productId = $this->redis->get($key);
+            $quantity = $this->redis->get($key . ':quantity');
+            $push = ['product_id' => $productId,
+                'quantity' => $quantity];
+            array_push($result,$push);
         }
 
         return $result;
