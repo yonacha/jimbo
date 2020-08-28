@@ -27,7 +27,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('add-to-cart-button', require('./components/AddToCartButton').default);
-Vue.component('cart', require('./components/CartGuest.vue').default);
+Vue.component('cartGuest', require('./components/CartGuest.vue').default);
+Vue.component('cartUser', require('./components/CartUser').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

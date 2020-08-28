@@ -28,7 +28,7 @@
                 --}}
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <cart></cart>
+                        <cart-guest></cart-guest>
                         <i class="tim-icons icon-cart"></i> {{ __('Cart') }}
                     </a>
                 </li>

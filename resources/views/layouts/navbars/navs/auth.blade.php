@@ -22,6 +22,12 @@
                         <i class="tim-icons icon-minimal-left"></i> {{ __('Back to Dashboard') }}
                     </a>
                 </li>
+                <li>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <cart-user></cart-user>
+                        <i class="tim-icons icon-cart"></i> {{ __('Cart') }}
+                    </a>
+                </li>
                 <li class="search-bar input-group">
                     <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
                         <span class="d-lg-none d-md-block">{{ __('Search') }}</span>
