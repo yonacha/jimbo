@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="918e5cd3-9078-4d61-855d-fc934f61dc97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/CartUser.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CartManagement/TemporaryCartRedis.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CartManagement/TemporaryCartRedis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/navs/auth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/navs/auth.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/CartGuest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/CartGuest.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/navs/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/navs/guest.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +204,7 @@
       <workItem from="1596024855135" duration="63000" />
       <workItem from="1596445620742" duration="28900000" />
       <workItem from="1597654112010" duration="55094000" />
-      <workItem from="1598528323287" duration="9451000" />
+      <workItem from="1598528323287" duration="27923000" />
     </task>
     <task id="LOCAL-00001" summary="+auth">
       <created>1595928804653</created>
@@ -318,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598601241165</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="+ CartUser.vue">
+      <created>1598623004404</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598623004404</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +349,8 @@
     <MESSAGE value="+ redis get items in cart" />
     <MESSAGE value="+ database get items in cart" />
     <MESSAGE value="+ fixed getCartItems for redis&#10;+ CartGuest.vue component" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ fixed getCartItems for redis&#10;+ CartGuest.vue component" />
+    <MESSAGE value="+ CartUser.vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ CartUser.vue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="235" key="#CLI_Interpreters" timestamp="1596022556589">
@@ -369,10 +377,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="707" y="424" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1597753714497" />
-    <state x="563" y="117" key="CommitChangelistDialog2" timestamp="1598601239871">
+    <state x="563" y="117" key="CommitChangelistDialog2" timestamp="1598623003197">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="563" y="117" key="CommitChangelistDialog2/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598601239871" />
+    <state x="563" y="117" key="CommitChangelistDialog2/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598623003197" />
     <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1597995807951">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -385,10 +393,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="461" y="225" key="SettingsEditor/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1597753825001" />
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1598529552901">
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1598623008687">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598529552901" />
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1598623008687" />
     <state x="570" y="227" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1596450452897">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

@@ -10,7 +10,8 @@
             </div>
             <a class="navbar-brand" href="#">{{ $page ?? '' }}</a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -27,9 +28,12 @@
                 </li>
                 --}}
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <cart-guest></cart-guest>
-                        <i class="tim-icons icon-cart"></i> {{ __('Cart') }}
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">
+                        <cart-guest products="{{$cartRedis}}"></cart-guest>
+                        <i class="tim-icons icon-cart"></i> <span>{{ __('Cart') }}</span>@if($cartRedis)
+                                <span>( {{count(json_decode($cartRedis))}} )</span>
+                            @endif
                     </a>
                 </li>
                 <li class="nav-item ">

@@ -10,14 +10,16 @@ use Predis\Collection\Iterator;
 
 class TemporaryCartRedis implements TemporaryCartContract
 {
-    protected $redis,$preposition,$sessionToken;
+    protected $redis,$preposition,$sessionToken,$sessionTokenRequest,$prepositionRequest;
 
-    function __construct()
+    function __construct($sessionKey)
     {
         $this->redis = new Client();
-        $this->sessionToken = session()->get("_token");
+        $this->sessionTokenRequest = $sessionKey;
 
+        $this->sessionToken = session()->get('_token');
         $this->preposition = 'cart:' . $this->sessionToken;
+        $this->prepositionRequest = 'cart:' . $this->sessionTokenRequest;
 
     }
 
@@ -52,7 +54,7 @@ class TemporaryCartRedis implements TemporaryCartContract
     public function getCartItems()
     {
         $result = array();
-        foreach(new Iterator\Keyspace($this->redis,$this->preposition . ':product:*[0-9]') as $key) {
+        foreach(new Iterator\Keyspace($this->redis,$this->prepositionRequest . ':product:*[0-9]') as $key) {
             $productId = $this->redis->get($key);
             $quantity = $this->redis->get($key . ':quantity');
             $push = ['product_id' => $productId,
